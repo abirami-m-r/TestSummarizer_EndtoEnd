@@ -23,6 +23,7 @@ Dataset: Samsung/samsum
 
 
 Steps:
+Training Pipeline:
     Dataingestion:
             Download the data as zip
             extract the downloaded zip
@@ -40,7 +41,10 @@ Steps:
             trainer.train()
             save the model and tokenizer
     Model Evaluation:
-            
-
+            Take few samples from the test set, load the saved tokenizer, model
+            Metrics used: "rouge1", "rouge2", "rougeL", "rougeLsum"
+Prediction Pipeline:
+        Load the model 
+        Use for prediction in FASTAPI
 
 
